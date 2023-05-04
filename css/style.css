@@ -1,0 +1,828 @@
+html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    background-color: whitesmoke;
+    color: black;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+/*=================================================
+            content boxes 
+==================================================*/
+.content-box-lg {
+    padding: 100px 0;
+}
+
+.content-box-md {
+    padding: 80px 0;
+}
+
+.content-box-sm {
+    padding: 60px 0;
+}
+
+/*=================================================
+            preloader
+==================================================*/
+#preloader {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#status {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: white;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: circle .8s ease infinite;
+    -webkit-animation: circle .8s ease infinite;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/*=================================================
+            Home
+==================================================*/
+#home {
+    background-image: url(../img/home/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+#home .home-content h2 {
+    color: white;
+    margin-bottom: 0;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+#home .home-content h2 span {
+    font-weight: bold;
+    color: deepskyblue;
+    font-size: 66px;
+}
+
+#home .home-content h2 span .trek-i {
+    font-size: 76px;
+}
+
+#home .home-content h2 span .trek-n {
+    font-size: 86px;
+}
+
+#home .home-content h2 span .trek-g {
+    font-size: 96px;
+}
+
+#home .home-content p {
+    width: 700px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+#home .home-content button {
+    background-color: transparent;
+    color: deepskyblue;
+    border-color: deepskyblue;
+    width: 170px;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+#home .home-content button:hover {
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    border: none;
+}
+
+#home #arrow-down i {
+    width: 32px;
+    height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#home #arrow-down i.fa-angle-down {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    margin-left: -15px;
+    -webkit-transform: translate(-95%, -50%);
+    transform: translate(-95%, -50%);
+    color: white;
+    background-color: transparent;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transform: translate(-95%, -50%);
+    -ms-transform: translate(-95%, -50%);
+    -o-transform: translate(-95%, -50%);
+}
+
+#home #arrow-down i.fa-angle-down:hover {
+    color: deepskyblue;
+}
+
+/*=================================================
+            About
+==================================================*/
+#about .about-heading h2 {
+    color: black;
+    margin: 0 0 45px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#about .about-heading h2 span {
+    font-size: 52px;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+#about .about-content img {
+    margin: auto;
+}
+
+#about .about-content p {
+    font-size: 17px;
+    margin: 0 0 30px 0;
+    line-height: 1.5;
+    padding: 0;
+    color: #212226;
+    text-align: center;
+}
+
+#about .about-content p:nth-child(2) {
+    margin-top: 30px;
+}
+
+#about {
+    background-color: whitesmoke;
+    padding: 50px 0;
+}
+
+/*=================================================
+            guidelies
+==================================================*/
+#guidelines {
+    padding: 50px 0;
+}
+
+#guidelines hr {
+    width: 200px
+}
+
+#guidelines .guidelines-heading h2 {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#guidelines .guidelines-heading h2 span {
+    color: deepskyblue;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+#guidelines-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#guidelines-right .tips {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
+#guidelines-right .tips h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#guidelines-right .upwords h4 {
+    margin: 0 0 12px 0;
+}
+
+#guidelines-left h4 {
+    text-transform: uppercase;
+}
+
+#guidelines-left ul li {
+    list-style: none;
+}
+
+/*=================================================
+            camp
+==================================================*/
+#camp-sites .camp-site {
+    margin: 8px;
+}
+
+#camp .camp-heading h2 {
+    font-size: 40px;
+    margin: 30px 0 14px 0;
+    text-transform: uppercase;
+}
+
+#camp .camp-heading p {
+    margin: 0 0 50px 0;
+}
+
+#camp .camp-heading h2 span {
+    font-size: 52px;
+    color: deepskyblue;
+}
+
+#camp-sites .owl-prev {
+    background-color: transparent;
+    color: black;
+    font-size: 35px;
+
+}
+
+#camp-sites .owl-next {
+    background-color: transparent;
+    color: black;
+    font-size: 35px;
+
+}
+
+#camp-sites .camp-site img {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/*=================================================
+            special treks
+==================================================*/
+#special .special-heading h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#special .special-heading h2 span {
+    font-size: 52px;
+    color: deepskyblue;
+}
+
+#special p {
+    max-width: 480px;
+    color: white;
+}
+
+#special h4 {
+    margin-top: 30px;
+    color: deepskyblue;
+    text-transform: uppercase;
+}
+
+#special {
+    background-color: black;
+}
+
+#special .row:nth-child(2) {
+    margin-top: 25px;
+}
+
+#special button {
+    background-color: transparent;
+    color: deepskyblue;
+    border-color: deepskyblue;
+    width: 170px;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    margin-top: 30px;
+}
+
+#special button:hover {
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    border: none;
+}
+
+/* =================================================
+                Portfolio                                     
+===================================================*/
+#portfolio .portfolio-heading h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#portfolio .portfolio-heading h2 span {
+    font-size: 52px;
+    color: deepskyblue;
+}
+
+.row.no-gutters [class*=col-] {
+    padding: 0;
+}
+
+/* filter css */
+#isotope-filters {
+    margin-bottom: 10px;
+    padding: 20px 20px 20px 0;
+}
+
+#isotope-filters button {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-right: 35px;
+    outline: 0;
+}
+
+#isotope-filters button span {
+    display: block;
+    padding-bottom: 5px;
+    -webkit-transition: border-color .4s ease-in-out;
+    transition: border-color .4s ease-in-out;
+}
+
+#isotope-filters button.active span {
+    color: deepskyblue;
+    border-bottom: 3px solid deepskyblue;
+}
+
+* zoom effect */ .portfolio-item img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.portfolio-item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.portfolio-item {
+    overflow: hidden;
+}
+
+/*=================================================
+            community
+==================================================*/
+#community {
+    background: url(../img/community/paralox.jpg) no-repeat fixed center;
+    background-size: cover;
+
+}
+
+#community .content-box-lg {
+    padding: 150px 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+#community .c-text h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+#community .c-text h3 span {
+    color: deepskyblue;
+}
+
+#community .c-text button {
+    background-color: transparent;
+    color: deepskyblue;
+    border-color: deepskyblue;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+#community .c-text button:hover {
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+    border: none;
+}
+
+/*=================================================
+            mode
+==================================================*/
+#mode .trekk-mode ul li {
+    list-style: none;
+}
+
+#mode .trekk-mode {
+    padding: 25px;
+    position: relative;
+}
+
+#mode .trekk-mode span {
+    width: 20px;
+    height: 6px;
+    background-color: deepskyblue;
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40px;
+    left: 5px;
+}
+
+#mode h4 {
+    text-transform: uppercase;
+}
+
+/*=================================================
+            contact
+==================================================*/
+#contact {
+    padding: 40px;
+}
+
+#contact .contact-left i {
+    font-size: 18px;
+    margin: 10px;
+}
+
+#contact .contact-left {
+    padding: 20px;
+}
+
+.contact-left p {
+    width: 350px
+}
+
+.contact-right h3 {
+    text-transform: uppercase;
+}
+
+.contact-right h3 span {
+    color: deepskyblue;
+    text-transform: uppercase;
+}
+
+.contact-right input {
+    width: 300px;
+    outline: none;
+    line-height: 1.5;
+    margin: 2px;
+}
+
+.contact-right button {
+    margin: 20px 0 0 120px;
+    border: 1px solid deepskyblue;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 15px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.contact-right button:hover {
+    background-color: deepskyblue;
+    color: white;
+}
+
+.rule {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+/*=================================================
+            Treks Pricing
+==================================================*/
+#treks-pricing {
+    padding: 50px 0 0 0;
+}
+
+#treks-pricing span {
+    width: 20px;
+    height: 6px;
+    background-color: deepskyblue;
+    display: inline-block;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 16px;
+    left: -5px;
+}
+
+#treks-pricing h4 {
+    margin-bottom: 30px
+}
+
+#treks-pricing ul li {
+    list-style: none;
+    margin: 15px 4px 15px -40px;
+    font-family: arial;
+}
+
+#treks-pricing .name ul li {
+    margin: 20px 5px 10px -40px;
+}
+
+#treks-pricing .status ul li {
+    margin: 20px 5px 10px -40px;
+    color: Green;
+}
+
+#treks-pricing .status ul li:nth-child(4) {
+    color: orange;
+}
+
+#treks-pricing .status ul li:nth-child(7) {
+    color: orange;
+}
+
+#treks-pricing ul li button {
+    outline: none;
+    border: 1px solid deepskyblue;
+    font-weight: 600;
+    padding: 2px;
+    font-size: 13px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#treks-pricing ul li button:hover {
+    background-color: deepskyblue;
+    color: white;
+}
+
+#treks-pricing ul li .close-bt {
+
+    border: solid 1px orange;
+    font-weight: 600;
+    padding: 2px;
+    font-size: 13px;
+}
+
+#treks-pricing ul li .close-bt:hover {
+    background-color: orange;
+}
+
+#treks-pricing .pricing ul li {
+    margin: 20px 5px 10px -40px;
+}
+
+#treks-pricing h3 {
+    font-size: 40px;
+    text-align: center;
+    color: deepskyblue;
+    margin-bottom: 60px
+}
+
+/* =================================================
+                Navigation                                     
+===================================================*/
+.navbar {
+    padding: 35px 0 20px 0;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.site-nav-wrapper {
+    padding: 0 85px;
+}
+
+.navbar-brand {
+    padding: 4px 15px;
+
+}
+
+ul.navbar-nav > li > a {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+    background: none;
+    color: deepskyblue;
+}
+
+/* white navigation */
+.white-nav-top {
+    background: #fff;
+    padding: 10px 0;
+    -webkit-box-shadow: 0 8px 6px -9px #999;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+}
+
+.white-nav-top ul.navbar-nav > li > a {
+    color: #212226;
+}
+
+.white-nav-top ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+    color: deepskyblue;
+}
+
+.white-nav-top ul.navbar-nav > li.active > a {
+    color: deepskyblue;
+    font-weight: 500;
+}
+
+/* =================================================
+                footer                                    
+===================================================*/
+footer {
+    background: #212226;
+    padding: 30px;
+}
+
+footer p {
+    color: #fff;
+    line-height: 20px;
+    margin: 0;
+}
+
+footer p span {
+    color: deepskyblue;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    font-size: 22px;
+
+}
+
+.btn-back-to-top:hover {
+    color: #fff;
+    border: 1px solid deepskyblue;
+    background-color: deepskyblue;
+}
+
+/* =================================================
+                Animation                                     
+===================================================*/
+#home h2,
+#home p,
+#home .btn,
+#arrow-down i {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+.home-content h2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+#home .btn {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+#arrow-down i {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
